@@ -51,8 +51,86 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '首页', icon: 'dashboard' }
     }]
+  },
+  {
+    path: '/monitor',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Monitor',
+        component: () => import('@/views/monitor/index'),
+        meta: { title: '统一监控', icon: 'el-icon-monitor' }
+      }
+    ]
+  },
+  // inspection系统巡检
+  {
+    path: '/inspection',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Inspection',
+        component: () => import('@/views/inspection/index'),
+        meta: { title: '系统巡检', icon: 'el-icon-monitor' }
+      }
+    ]
+  },
+  // 故障定位与分析locationStatic
+  {
+    path: '/locationStatic',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'LocationStatic',
+        component: () => import('@/views/locationStatic/index'),
+        meta: { title: '故障定位与分析', icon: 'el-icon-monitor' }
+      }
+    ]
+  },
+  // 应用软件许可管理softwarelicense
+
+  {
+    path: '/softwarelicense',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Softwarelicense',
+        component: () => import('@/views/softwarelicense/index'),
+        meta: { title: '应用软件许可管理', icon: 'el-icon-monitor' }
+      }
+    ]
+  },
+  // 应用软件巡检softwareinspection
+  {
+    path: '/softwareinspection',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Softwareinspection',
+        component: () => import('@/views/softwareinspection/index'),
+        meta: { title: '应用软件巡检', icon: 'el-icon-monitor' }
+      }
+    ]
+  },
+  // 运维共享知识库knowledgebase
+  {
+    path: '/knowledgebase',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Knowledgebase',
+        component: () => import('@/views/knowledgebase/index'),
+        meta: { title: '运维共享知识库', icon: 'el-icon-monitor' }
+      }
+    ]
   },
 
   {
@@ -60,7 +138,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    meta: { title: '统一监控', icon: 'el-icon-s-help' },
     children: [
       {
         path: 'table',
